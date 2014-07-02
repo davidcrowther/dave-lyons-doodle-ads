@@ -127,7 +127,7 @@
             <p class="name"><strong>Elaine</strong>, CEO, 52</p>
           </div>
         </div>
-        <a href="#" class="btn btn-warning">I Want My FREE Consultation</a>
+        <a href="#" id="click" class="btn btn-warning">I Want My FREE Consultation</a>
       </div>
     </article>
     <!-- /.testimonials -->
@@ -138,10 +138,10 @@
     <div class="container clearfix">
       <p class="pull-left copyright">Doodle Ads Ltd, 42 Hillview Cr, Guildford, Surrey, GU2 8BQ, UK</p>
       <p class="pull-right menu">
-        <a href="#" title="">Home</a>    
-        <a href="#" title="">Privacy Statements</a>    
-        <a href="#" title="">Terms Conditions</a>    
-        <a href="#" title="">Contact Us</a> 
+        <a href="http://doodle-ads.co.uk/home/" title="Home">Home</a>    
+        <a href="http://doodle-ads.co.uk/privacy-statements/" title="Privacy Statements">Privacy Statements</a>    
+        <a href="http://doodle-ads.co.uk/terms-conditions/" title="Terms Conditions">Terms Conditions</a>    
+        <a href="http://doodle-ads.co.uk/contact-us/" title="Contact Us">Contact Us</a> 
       </p>
     </div>
   </footer>
@@ -185,7 +185,13 @@
       }
     });
 
-
+    $("#click").click(function (){ 
+      $('html, body').animate({
+          scrollTop: $("form").offset().top-100
+      }, 1000);
+      $("form").find(".form-control:first").focus();
+      return false; 
+    });
 
   
   });
